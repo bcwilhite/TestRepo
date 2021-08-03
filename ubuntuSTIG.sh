@@ -58,8 +58,8 @@ echo "Setting ownership to root for /bin, /sbin, /usr/bin, /usr/sbin, /usr/local
 find -L /bin /sbin /usr/bin /usr/sbin /usr/local/bin /usr/local/sbin ! -user root -type f -exec chown -c root '{}' \;
 echo "Setting group ownership to root for /bin, /sbin, /usr/bin, /usr/sbin, /usr/local/bin and /usr/local/sbin..."
 find -L /bin /sbin /usr/bin /usr/sbin /usr/local/bin /usr/local/sbin ! -group root -type f -exec chgrp -c root '{}' \;
-echo "Setting mode to 0600 for /var/log/audit/*..."
-chmod -c 0600 /var/log/audit/*
+# echo "Setting mode to 0600 for /var/log/audit/*..."
+# chmod -c 0600 /var/log/audit/*
 
 # chmod persistent cloud-init per-boot script
 if [ ! -f /var/lib/cloud/scripts/per-boot/per-boot.sh ]; then
