@@ -7,7 +7,7 @@ fi
 # apt-get update to assist nxPackage dsc automation
 echo "Executing apt-get update..."
 apt-get update -q > ./aptgetupdateresults.log
-
+sleep 20
 set -e
 
 # dsc deployment automation
